@@ -1,0 +1,27 @@
+{
+  "name": "one-autotester",
+  "version": "0.0.1",
+  "description": "Batch testing for AutoTester",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpwc/one-autotester.git"
+  },
+  "author": "Poh Wei Cheng (A011185R)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cpwc/one-autotester/issues"
+  },
+  "homepage": "https://github.com/cpwc/one-autotester#readme",
+  "scripts": {
+    "grunt": "grunt"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-exec": "^0.4.6"
+  },
+  "dependencies": {
+    "async": "^1.4.2",
+    "xml2js": "^0.4.11"
+  }
+}

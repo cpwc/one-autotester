@@ -1,0 +1,10 @@
+{
+  "path" : {
+    "autotester": "\"Debug/AutoTester.exe\"",
+    "tests": "tests/"
+  },
+  "pattern" : {
+    "source": "",
+    "query": ""
+  }
+}
