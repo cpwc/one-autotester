@@ -3,15 +3,19 @@ One autotester for all your AutoTester needs.
 
 # Getting Started
 
+Let's get started to make running AutoTester on multiple files or test cases an ease.
+
 ## Requirements
 
-- Node.js v0.12.7 (https://nodejs.org/en/)
+- node.js v0.12.7 (https://nodejs.org/en/)
+- grunt-cli
 
 ## Setup
 
-Install node.js dependencies
+Install node.js dependencies and grunt-cli as global dependency
 ```shell
 npm install
+npm install -g grunt-cli
 ```
 Configure one-config.json with proper file path to `AutoTester.exe` and `test cases`.
 
