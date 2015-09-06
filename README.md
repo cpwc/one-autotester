@@ -21,7 +21,7 @@ Configure one-config.json with proper file path to `AutoTester.exe` and `test ca
 
 ## Usage
 
-With grunt-cli installed.
+### With grunt-cli installed.
 ```shell
 grunt autotest:[your test cases]
 ```
@@ -35,3 +35,5 @@ Run all test cases for modifies and parent e.g. `modifies-src-01.txt` & `parent-
 ```shell
 grunt autotest:modifies:parent
 ```
+
+### Without grunt-cli installed.
