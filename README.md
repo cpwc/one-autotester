@@ -8,7 +8,7 @@ Let's get started to make running AutoTester on multiple files or test cases an 
 ## Requirements
 
 - node.js v0.12.7 (https://nodejs.org/en/)
-- grunt-cli
+- grunt-cli (optional but recommended)
 
 ## Setup
 
@@ -21,6 +21,7 @@ Configure one-config.json with proper file path to `AutoTester.exe` and `test ca
 
 ## Usage
 
+With grunt-cli installed.
 ```shell
 grunt autotest:[your test cases]
 ```
