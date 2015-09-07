@@ -21,6 +21,8 @@ module.exports = function (grunt) {
         var files = [];
         var args = this.args;
 
+        var finish = this.async();
+
         async.series([
             function (done) {
                 args.forEach(function (arg) {
@@ -41,17 +43,23 @@ module.exports = function (grunt) {
                         });
                     }
 
-                    console.log(files);
+                    //console.log(files);
                     done();
                 });
             },
             function (done) {
                 files.forEach(function (file) {
                     grunt.task.run('exec:autotester:' + file.source + ":" + file.query + ":" + file.out + ":" + file.redirect);
-                })
+                });
+                done();
+            },
+            function (done) {
+                grunt.task.run('extract');
                 done();
             }
-        ]);
+        ], function (err, results) {
+            finish();
+        });
 
     });
 };
