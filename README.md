@@ -37,3 +37,16 @@ grunt autotest:modifies:parent
 ```
 
 ### Without grunt-cli installed.
+```shell
+node -e "require('grunt').tasks(['autotest:<your test cases>']);"
+```
+
+Run all test cases for modifies e.g. `modifies-src-01.txt`
+```shell
+node -e "require('grunt').tasks(['autotest:modifies']);"
+```
+
+Run all test cases for modifies and parent e.g. `modifies-src-01.txt` & `parent-src-01.txt`
+```shell
+node -e "require('grunt').tasks(['autotest:modifies:parent']);"
+```
