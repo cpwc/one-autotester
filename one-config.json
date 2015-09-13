@@ -1,7 +1,8 @@
 {
   "path": {
     "autotester": "\"Debug/AutoTester.exe\"",
-    "tests": "tests/"
+    "tests": "tests/",
+    "output": "tests/output/"
   },
   "pattern": {
     "separator": "-",
