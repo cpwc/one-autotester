@@ -1,6 +1,12 @@
 # one-autotester
 One autotester for all your AutoTester needs.
 
+This program was inspired by CS3202 lecturer's perl script to automatically execute all test cases for AutoTester.
+Written to help my group to run bulk/selected test cases with ease without messing with batch or Powershell files.
+Feel free to fork and issue pull requests to further improve this script. 
+
+Do keep the LICENSE :)
+
 # Getting Started
 
 Let's get started to make running AutoTester on multiple files or test cases an ease.
