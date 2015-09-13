@@ -26,20 +26,22 @@ module.exports = function (grunt) {
         async.series([
             function (done) {
                 args.forEach(function (arg) {
-                    var sources = grunt.file.expand('tests/' + arg + '-src-*.txt');
-                    var queries = grunt.file.expand('tests/' + arg + '-qur-*.txt');
+                    var sourceFilePattern = config.path.tests + (config.pattern.source).replace("[args]", arg).replace("[no]", "*");
+                    var queryFilePattern = config.path.tests + (config.pattern.query).replace("[args]", arg).replace("[no]", "*");
+                    var sources = grunt.file.expand(sourceFilePattern);
+                    var queries = grunt.file.expand(queryFilePattern);
 
                     if (sources.length != queries.length) {
                         grunt.fail.warn('Number of source files and query files does not tally.');
                     }
 
                     for (var i = 0; i < sources.length; i++) {
-                        var results = sources[i].replace('.txt', '').split('-');
+                        var results = sources[i].replace('.txt', '').split(config.pattern.separator);
                         files.push({
                             source: sources[i],
                             query: queries[i],
-                            out: results[0] + '-out-' + results[2] + '.xml',
-                            redirect: results[0] + '-out-' + results[2] + '.out',
+                            out: (config.pattern.out).replace("[args]", results[0]).replace("[no]", results[2]),
+                            redirect: (config.pattern.redirect).replace("[args]", results[0]).replace("[no]", results[2])
                         });
                     }
 

@@ -1,10 +1,13 @@
 {
-  "path" : {
+  "path": {
     "autotester": "\"Debug/AutoTester.exe\"",
     "tests": "tests/"
   },
-  "pattern" : {
-    "source": "",
-    "query": ""
+  "pattern": {
+    "separator": "-",
+    "source": "[args]-src-[no].txt",
+    "query": "[args]-qur-[no].txt",
+    "out": "[args]-out-[no].xml",
+    "redirect": "[args]-out-[no].out"
   }
 }
