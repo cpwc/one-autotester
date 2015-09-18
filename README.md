@@ -28,6 +28,12 @@ Configure one-config.json with proper file path to `AutoTester.exe` and `test ca
 ## Usage
 
 ### With grunt-cli installed.
+--
+Run all test cases within your directory.
+```shell
+grunt autotest
+```
+Run specific test cases within your directory.
 ```shell
 grunt autotest:[your test cases]
 ```
@@ -43,6 +49,12 @@ grunt autotest:modifies:parent
 ```
 
 ### Without grunt-cli installed.
+--
+Run all test cases within your directory.
+```shell
+node -e "require('grunt').tasks(['autotest']);"
+```
+Run specific test cases within your directory.
 ```shell
 node -e "require('grunt').tasks(['autotest:<your test cases>']);"
 ```
